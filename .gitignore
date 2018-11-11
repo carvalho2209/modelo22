@@ -1,0 +1,16 @@
+bin/
+obj/
+/src/NampulaLib
+/src/TestResults
+/src/*.suo
+/doc/~$*
+/installer
+/installer/*
+/doc/.~*
+/doc/~$*
+*.user
+/src/doc/temp
+/src/_ReSharper.*
+/src/BuildInstaller.xml
+/src/packages/
+!/src/packages/repositories.config

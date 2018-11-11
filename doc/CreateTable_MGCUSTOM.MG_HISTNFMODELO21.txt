@@ -1,0 +1,55 @@
+-- Create table
+
+
+
+
+
+create table MG_HISTNFMODELO21
+
+(
+
+  org_tab_in_codigo    NUMBER(3),
+
+  org_pad_in_codigo    NUMBER(3),
+
+  org_in_codigo        NUMBER(5),
+
+  fil_in_codigo        NUMBER(5),
+
+  rec_dt_recibo        DATE,
+
+  rec_st_nomearqmestre VARCHAR2(50),
+
+  rec_st_hasharqmestre VARCHAR2(100),
+
+  rec_st_nomearqitem   VARCHAR2(50),
+
+  rec_st_hasharqitem   VARCHAR2(100),
+
+  rec_st_nomearqdest   VARCHAR2(50),
+
+  rec_st_hasharqdest   VARCHAR2(100),
+
+  rec_in_qtderegistro  NUMBER(10),
+
+  rec_re_vlrtotal      NUMBER(22,8),
+
+  rec_re_vlrdesc       NUMBER(22,8),
+
+  rec_re_vlracres      NUMBER(22,8),
+
+  rec_re_vlrbaseicms   NUMBER(22,8),
+
+  rec_re_vlricms       NUMBER(22,8),
+
+  rec_re_vlrisentas    NUMBER(22,8),
+
+  rec_re_vlroutros     NUMBER(22,8),
+
+  rec_dt_referenciaini DATE,
+
+  rec_dt_referenciafin DATE
+
+)
+
+

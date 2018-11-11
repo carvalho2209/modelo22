@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E19DE293-791F-476D-A684-3B66CAEC124D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model22TextFile.Domain</RootNamespace>
+    <AssemblyName>Model22TextFile.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\ConvertExtentions.cs" />
+    <Compile Include="Extensions\MovimentoExtentions.cs" />
+    <Compile Include="File\Alpha.cs" />
+    <Compile Include="File\Arquivo.cs" />
+    <Compile Include="File\Campo.cs" />
+    <Compile Include="File\IArquivo.cs" />
+    <Compile Include="File\IBlocoArquivo.cs" />
+    <Compile Include="File\ICampo.cs" />
+    <Compile Include="File\IRegistro.cs" />
+    <Compile Include="File\Numerico.cs" />
+    <Compile Include="File\NumericoCodigoIdentificacao.cs" />
+    <Compile Include="File\NumericoData.cs" />
+    <Compile Include="File\NumericoDataAnoMes.cs" />
+    <Compile Include="File\Registro.cs" />
+    <Compile Include="HashCode.cs" />
+    <Compile Include="Model22\ArquivoDadosCadastrais.cs" />
+    <Compile Include="Model22\ArquivoInformacaoControle.cs" />
+    <Compile Include="Model22\ArquivoItem.cs" />
+    <Compile Include="Model22\ArquivoMestre.cs" />
+    <Compile Include="Model22\ArquivoModel22.cs" />
+    <Compile Include="Model22\HashDosArquivos.cs" />
+    <Compile Include="Model22\HistoricoModelo22E21.cs" />
+    <Compile Include="Model22\IHashDosArquivos.cs" />
+    <Compile Include="Model22\IMovimentoRepositorio.cs" />
+    <Compile Include="Model22\IStoreModel22.cs" />
+    <Compile Include="Model22\MovimentoModel22.cs" />
+    <Compile Include="Model22\MovimentoRepositorio.cs" />
+    <Compile Include="Model22\RegistroDadosCadastrais.cs" />
+    <Compile Include="Model22\RegistroInformacaoControle.cs" />
+    <Compile Include="Model22\RegistroItem.cs" />
+    <Compile Include="Model22\RegistroMestre.cs" />
+    <Compile Include="Model22\StoreModel22.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model22TextFile.Infra\Model22TextFile.Infra.csproj">
+      <Project>{4d5831aa-54f5-447e-a2fa-929540f8efb6}</Project>
+      <Name>Model22TextFile.Infra</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
